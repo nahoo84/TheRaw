@@ -1,0 +1,417 @@
+@charset "utf-8";
+
+/* ---------------------------------------
+  reset setting
+------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arvo', serif;
+  font-family: 'Zen Maru Gothic', serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+img {
+  vertical-align: bottom;
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------------------
+  wrapper setting
+------------------------------------------*/
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+  color: #333;
+}
+
+/* ---------------------------------------
+  header setting
+------------------------------------------*/
+.header {
+  position: sticky;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  padding: 30px 0;
+  background-color: #fff;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.header h1 a {
+  font-size: 25px;
+}
+
+.products_page {
+  margin-bottom: 40px;
+}
+
+/* ---------------------------------------
+  hamburger btn, nav setting
+------------------------------------------*/
+.burger {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 4%;
+  right: 4%;
+  z-index: 2;
+}
+
+.burger span {
+  width: 70%;
+  height: 2px;
+  background-color: #333;
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.burger span:first-child {
+  top: -20px;
+}
+
+.burger.active span:first-child {
+  transform: rotate(-45deg);
+  top: -20px;
+  background-color: #fff;
+}
+
+.burger.active span:last-child {
+  transform: rotate(45deg);
+  top: -20px;
+  background-color: #fff;
+}
+
+/* ----nav---- */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 3, 3, 0.833);
+  display: none;
+  z-index: 1;
+}
+
+.nav_inner {
+  padding-top: 20px;
+}
+
+.nav_inner a {
+  display: inline-block;
+  margin: 20px 0 0 40px;
+  padding: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+
+/* ---------------------------------------
+  main setting
+------------------------------------------*/
+.main h2 {
+  font-weight: normal;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.goods {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.goods li {
+  width: calc(100% / 4);
+  padding: 0 8px;
+  margin-bottom: 30px;
+}
+
+.goods img {
+  margin-bottom: 10px;
+}
+
+.goods img:hover {
+  opacity: 0.6;
+  transition: 0.8s
+}
+
+.goods p {
+  line-height: 1.5;
+}
+
+.page {
+  text-align: center;
+  margin-bottom: 150px;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+}
+
+.products li {
+  padding: 0 20px;
+}
+
+.products2 {
+  margin-bottom: 350px;
+}
+
+.back {
+  margin-bottom: 170px;
+}
+
+/* ---------------------------------------
+  footer setting
+------------------------------------------*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer .sns {
+  display: flex;
+}
+
+.footer .sns li:nth-child(2) a {
+  padding: 30px;
+}
+
+
+/* ---------------------------------------
+  item page setting
+------------------------------------------*/
+.main_item {
+  max-width: 800px;
+}
+
+.item_page {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.item_image {
+  width: 50%;
+}
+
+.item_detail {
+  width: 40%;
+}
+
+.item_detail p,
+dt,
+dd {
+  line-height: 1.5;
+}
+
+.item_text,
+.item_price {
+  margin-bottom: 30px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.item dt {
+  width: 30%;
+}
+
+.item dd {
+  width: 60%;
+}
+
+/* ---------------------------------------
+  company page setting
+------------------------------------------*/
+.main_company {
+  max-width: 600px;
+}
+
+.main_company h2 {
+  margin-bottom: 40px;
+}
+
+.company {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.company dt {
+  width: 30%;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 10px;
+}
+
+.company dd {
+  width: 70%;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0;
+}
+
+dt:last-of-type {
+  border-bottom: 0;
+}
+
+dd:last-of-type {
+  border-bottom: 0;
+}
+
+.map iframe {
+  width: 600px;
+  height: 300px;
+  filter: grayscale(100%);
+  margin-bottom: 150px;
+}
+
+/* ---------------------------------------
+ about page setting
+------------------------------------------*/
+.main_about {
+  max-width: 600px;
+}
+
+.about {
+  line-height: 1.8;
+  margin-bottom: 380px;
+}
+
+/* ---------------------------------------
+ responsive setting
+------------------------------------------*/
+@media (max-width:900px) {
+
+  /* ---------------------------------------
+  wrapper setting
+------------------------------------------*/
+  .wrapper {
+    max-width: auto;
+  }
+
+  /* ---------------------------------------
+  main setting
+------------------------------------------*/
+
+  .goods li {
+    width: calc(100% / 2);
+  }
+
+  .page {
+    margin-bottom: 50px;
+  }
+
+  .products li {
+    padding: 0 20px;
+  }
+
+  .products2 {
+    margin-bottom: 100px;
+  }
+
+  .back {
+    margin-bottom: 100px;
+  }
+
+  /* ---------------------------------------
+  footer setting
+------------------------------------------*/
+  .footer {
+    display: block;
+  }
+
+  /* ---------------------------------------
+  item page setting
+------------------------------------------*/
+
+  .item_page {
+    display: block;
+  }
+
+  .item_image {
+    width: auto;
+    margin-bottom: 40px;
+  }
+
+  .item_detail {
+    width: auto;
+  }
+
+  /* ---------------------------------------
+  company page setting
+------------------------------------------*/
+
+  .main_company h2 {
+    margin-bottom: 40px;
+  }
+
+  .company {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .company dt {
+    width: auto;
+    border-bottom: 0;
+    padding: 20px 0 0 5px;
+  }
+
+  .company dd {
+    width: auto;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0 20px 5px;
+  }
+
+  dd:last-of-type {
+    border-bottom: 0;
+  }
+
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    filter: grayscale(100%);
+    margin-bottom: 70px;
+  }
+
+  /* ---------------------------------------
+ about page setting
+------------------------------------------*/
+  .about {
+    line-height: 1.8;
+    margin-bottom: 100px;
+  }
+
+
+}
